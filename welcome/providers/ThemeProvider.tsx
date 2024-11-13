@@ -11,12 +11,9 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const colorScheme = useColorScheme();
     const theme = colorScheme === "dark" ? darkTheme : lightTheme;
     const themeColors = colorScheme === "dark" ? colors.dark : colors.light;
-
     return (
         <ThemeContext.Provider value={{ theme, colors: themeColors }}>
-
             {children}
-
         </ThemeContext.Provider>
     )
 }
